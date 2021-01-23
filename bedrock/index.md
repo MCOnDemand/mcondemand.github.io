@@ -10,19 +10,19 @@ This document is focused **Bedrock**, the system which is the foundation of all 
 
 ### Components
 
-**Component 1**: Server Management
+**Component 1**: [Server Management](/server_mgmt.md)
 
 - Spawn servers
 - Monitor server health
 - Destroy "dead" servers
 
-**Component 2**: Server Profiles
+**Component 2**: [Server Profiles](/server_profiles.md)
 
 - Store core configuration data
 - Store configuration files such that they can be easily edited, uploaded, and downloaded.
 - Transfer all configuration data to servers quickly.
 
-**Component 3**: World Storage
+**Component 3**: [World Storage](/world_storage.md)
 
 - Provide long-term storage for worlds
 - Minimize bandwidth usage
