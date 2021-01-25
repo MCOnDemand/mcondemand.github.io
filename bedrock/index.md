@@ -2,6 +2,21 @@
 
 This document is focused **Bedrock**, the system which is the foundation of all MCOD services.
 
+## Server system layers
+
+The server system has a number of different layers.
+
+1. **Network level** -
+This level is concerned with networking issues.
+This will include a dynamic DNS system as well as security features.
+2. **Instance level** -
+This level is only concerned with the actual machines servers are spawned on.
+At the moment, this means DO droplets.
+In the future this may be k8s pods.
+3. **Server level** -
+This level is concerned with the services running on an instance.
+These services include the Minecraft server and the MCOD daemon.
+
 ## Concept Outline
 
 **Concept**: Bedrock is a system for automatically deploying and managing ephemeral Minecraft servers.
