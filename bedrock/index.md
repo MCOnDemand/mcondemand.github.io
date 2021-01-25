@@ -25,31 +25,36 @@ These services include the Minecraft server and the MCOD daemon.
 
 ### Components
 
-**Component 1**: [Server Management](/server_mgmt.md)
+**Component 1**: [Instance Manager](/instance_mgmt.md)
 
-- Spawn servers
-- Monitor server health
-- Destroy "dead" servers
+- Create instances
+- Destroy instances
 
-**Component 2**: [Server Profiles](/server_profiles.md)
+**Component 2**: [Server Monitor](/server_monitor.md)
+
+- Monitor running services on instances
+- Shutdown "dead" servers
+- Handle shutdown requests
+
+**Component 3**: [Server Profiles](/server_profiles.md)
 
 - Store core configuration data
 - Store configuration files such that they can be easily edited, uploaded, and downloaded.
 - Transfer all configuration data to servers quickly.
 
-**Component 3**: [World Storage](/world_storage.md)
+**Component 4**: [World Storage](/world_storage.md)
 
 - Provide long-term storage for worlds
 - Minimize bandwidth usage
 - Maintain change history
 
-**Component 4**: Network Management
+**Component 5**: Network Management
 
 - Provide a secure network system
 - Allow dynamic DNS assignment
 - Monitor network traffic
 
-**Component 5**: Logging
+**Component 6**: Logging
 
 - Aggregate server logs
 - Provide a way of searching logs
