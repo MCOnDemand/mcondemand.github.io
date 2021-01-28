@@ -4,7 +4,7 @@ This website is for internal MCOD documents.
 
 ## Systems
 
-- [Bedrock](bedrock.md)
+- [Bedrock](/bedrock)
 
 ## TODO
 
