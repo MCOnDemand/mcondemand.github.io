@@ -1,12 +1,30 @@
 # Server Profiles
 
-Information for how server instances should be configured will be stored in server profiles.
+**Concept**: Server Profiles are packages which contain all configuration information for a server.
 
-Server profiles will serve two jobs:
+## Configuration Types
 
-1. Store core configuration information. This includes: the server JAR to be used, links to the file objects necessary to run the server. In the future, this may include: list of associated mods or plugins, links to plugin and mod configuration files.
-2. Store file-based configuration. This includes: server.properties, spigot.conf, bukkit.conf, plugin/mod JARs, plugin/mod configs.
+Server profiles need to store two types of information:
 
-For the first iteration of server profiles, the file portion of a server profile will contain all files necessary to run a server except the JAR and the world files.
-The JAR file will be downloaded based on the profile.
-The world files will be downloaded seperately. (See [World Storage](/world_storage.md))
+1. Server configuration --
+This is information related to how the server should be run:
+What executable should be used?
+2. Game configuration --
+This is the collection of files which configures the game server, including:
+server.properties, spigot/bukkit/paper/... configs, permissions, plugin/mod configs, plugins/mods, ...
+Basically any file that is written to/read from the execution dir falls into this category.
+
+## Server Profile Format
+
+**Server config** will be stored as a *document in a document store*.
+
+- Server config must be quickly and easily accessible for reads/writes
+- Server config will have *mostly* defined structure
+
+**Game config** will be stored as an *archive file in blob storage*.
+
+- Game config should maintain the expected directory structure
+- Game config should be relatively unchanging once first created
+- Game config must support both text and binary data
+
+*Would it make more sense to use the repository system from worlds for game config?*
