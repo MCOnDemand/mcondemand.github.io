@@ -28,3 +28,56 @@ Basically any file that is written to/read from the execution dir falls into thi
 - Game config must support both text and binary data
 
 *Would it make more sense to use the repository system from worlds for game config?*
+
+## Server Profile Data Structure
+
+While there are multiple components to a Server Profile, the core object is a document.
+The current structure of this document is as follows:
+
+```JSON
+{
+    "_id": UUID,
+    "name": string,
+    "owner": UUID,
+    "config": {
+        "jar": {
+            "type": string,
+            "version": string,
+        },
+        "player_lists": {
+            "enable_whitelist": bool,
+            "banned": [banned players],
+            "allowed": [allowed players (when whitelist is enabled)],
+        }
+    },
+    files: [
+        {
+            "url": string,
+            "type": repository|file,
+            "version": string,
+            "name": string,
+            "rules": [
+                {
+                }
+            ]
+        }
+    ]
+}
+```
+
+```JSON
+{
+    "_id": UUID,
+    "name": string,
+    "owner": UUID,
+    "jar": {
+        "flavor": string,
+        "version": string,
+    },
+    "assets":{
+        
+    }
+}
+```
+
+## Server Profile System
