@@ -32,7 +32,7 @@ These services include the Minecraft server and the MCOD daemon.
 - Create instances
 - Destroy instances
 
-**Component 2**: Server Monitor
+**Component 2**: [Server Monitor](/server_monitor.md)
 
 - Monitor running services on instances
 - Shutdown "dead" servers
